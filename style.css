@@ -1,0 +1,76 @@
+body {
+    background:linear-gradient(to right,black,crimson);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div#indexdisplayer {
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    height:50px;
+    width:50px;
+    padding: 10px;
+    position: absolute;
+    top:60px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width:700px;
+    border:10px solid black;
+    border-radius: 4px;
+}
+
+#imgid {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    border: none;
+    background-color:red;
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 4px;
+    cursor:pointer;
+    border: 2px solid white;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+button.onceki {
+    position: absolute;
+    top: 50%;
+    left:100px;
+
+}
+
+button.sonraki {
+    position: absolute;
+    top: 50%;
+    right:100px;
+
+}
+
+p.description {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}

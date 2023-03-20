@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHOTO ALBUM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div id="indexdisplayer"></div>
+
+<div id="container">
+    <img id="imgid">
+</div>
+
+<button class="onceki" onclick="previousPhoto()">Previous Photo</button>
+
+<button class="sonraki" onclick="nextPhoto()">Next Photo</button>
+
+<p class="description">In this javascript photo slider, when you click next button, you see next photo 
+    and when you click previous button, you see previous photo. There are five photos. After last photo 
+    it turns to first photo, after first photo, it turns last photo. It means sliding always go on. Thanks.
+</p>
+
+</body>
+
+<script>
+
+const photos = ["bir.jpg","iki.jpg","uc.jpg","dort.jpg","bes.jpg"]
+
+let photoIndex = 0;
+
+const photoImage = document.getElementById("imgid");
+
+photoImage.src = "images/" + photos[photoIndex];
+
+const indexdisplayer = document.getElementById("indexdisplayer");
+
+indexdisplayer.innerHTML = photoIndex + 1;
+
+function nextPhoto() {
+
+photoIndex = photoIndex + 1 ;
+
+if ( photoIndex > 4 ) {
+
+photoIndex = 0  ;
+
+}
+
+photoImage.src = "images/" + photos[photoIndex];
+
+indexdisplayer.innerHTML = photoIndex + 1;
+
+}
+
+function previousPhoto() {
+
+photoIndex = photoIndex - 1 ;
+
+if ( photoIndex < 0 ) {
+
+photoIndex = 4 ;
+
+}
+
+photoImage.src = "images/" + photos[photoIndex];
+
+indexdisplayer.innerHTML = photoIndex + 1 ;
+
+}
+</script>
+
+</html>
